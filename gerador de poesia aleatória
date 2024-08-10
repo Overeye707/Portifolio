@@ -1,5 +1,3 @@
--- Gerador de Poesia Aleatória em Lua
-
 local subjects = {"O sol", "A lua", "O vento", "As estrelas", "O mar"}
 local verbs = {"brilha", "sussurra", "canta", "dança", "encanta"}
 local objects = {"no horizonte", "entre as nuvens", "sobre as ondas", "na escuridão", "com os sonhos"}
