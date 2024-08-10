@@ -1,0 +1,21 @@
+local settings = {
+    volume = 50,
+    resolution = "1920x1080",
+    fullscreen = false
+}
+
+function setSetting(key, value)
+    if settings[key] ~= nil then
+        settings[key] = value
+    else
+        print("Setting not found: " .. key)
+    end
+end
+
+function getSetting(key)
+    return settings[key] or "Setting not found"
+end
+
+-- Exemplos de uso
+setSetting("volume", 75)
+print("Volume: " .. getSetting("volume"))
