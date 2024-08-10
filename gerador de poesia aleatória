@@ -2,12 +2,10 @@ local subjects = {"O sol", "A lua", "O vento", "As estrelas", "O mar"}
 local verbs = {"brilha", "sussurra", "canta", "dança", "encanta"}
 local objects = {"no horizonte", "entre as nuvens", "sobre as ondas", "na escuridão", "com os sonhos"}
 
--- Função para escolher um elemento aleatório de uma tabela
 local function randomChoice(t)
     return t[math.random(#t)]
 end
 
--- Função para gerar uma linha de poesia
 local function generateLine()
     local subject = randomChoice(subjects)
     local verb = randomChoice(verbs)
@@ -15,7 +13,6 @@ local function generateLine()
     return subject .. " " .. verb .. " " .. object
 end
 
--- Função para gerar uma poesia
 local function generatePoetry(lines)
     local poetry = ""
     for i = 1, lines do
@@ -24,8 +21,7 @@ local function generatePoetry(lines)
     return poetry
 end
 
--- Executa o gerador e imprime a poesia
-math.randomseed(os.time()) -- Inicializa o gerador de números aleatórios
-local poetry = generatePoetry(5) -- Gera uma poesia com 5 linhas
+math.randomseed(os.time())
+local poetry = generatePoetry(5)
 print("Poesia Aleatória:\n")
 print(poetry)
