@@ -1,0 +1,15 @@
+local timer = 0
+
+function updateTimer(dt)
+    timer = timer + dt
+end
+
+function getTimer()
+    return timer
+end
+
+-- Exemplo de uso
+function love.update(dt)
+    updateTimer(dt)
+    print("Timer: " .. getTimer())
+end
