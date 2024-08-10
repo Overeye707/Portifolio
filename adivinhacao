@@ -1,0 +1,24 @@
+-- adivinhacao/main.lua
+math.randomseed(os.time())
+
+local numero_secreto = math.random(1, 100)
+local tentativas = 0
+local acertou = false
+
+print("Bem-vindo ao jogo de adivinhação!")
+print("Adivinhe o número entre 1 e 100")
+
+while not acertou do
+    print("Digite o seu palpite:")
+    local palpite = io.read("*n")
+    tentativas = tentativas + 1
+
+    if palpite < numero_secreto then
+        print("O número secreto é maior!")
+    elseif palpite > numero_secreto then
+        print("O número secreto é menor!")
+    else
+        print("Parabéns! Você acertou o número secreto em " .. tentativas .. " tentativas.")
+        acertou = true
+    end
+end
