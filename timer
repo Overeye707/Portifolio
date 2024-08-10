@@ -8,7 +8,6 @@ function getTimer()
     return timer
 end
 
--- Exemplo de uso
 function love.update(dt)
     updateTimer(dt)
     print("Timer: " .. getTimer())
